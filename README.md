@@ -71,6 +71,7 @@ for the suggested bindings:
 | `Win` + `Shift` + `]` | Toggle random play            |
 | `Win` + `p`           | Toggle play/pause             |
 | `Win` + `Shift` + `p` | Show current track playing    |
+| `Win` + `Alt` + `p`   | Clear and load next playlist  |
 
 ### Set the MPD_HOST environment variable
 
@@ -114,6 +115,7 @@ bindsym $mod+bracketright exec "~/bin/mpd_client.sh next"
 bindsym $mod+Shift+bracketright exec "~/bin/mpd_client.sh random"
 bindsym $mod+p exec "~/bin/mpd_client.sh toggle"
 bindsym $mod+Shift+p exec "~/bin/mpd_client.sh state"
+bindsym $mod+Mod1+p exec "~/bin/mpd_client.sh next_playlist"
 ```
 
 ### Gnome config
