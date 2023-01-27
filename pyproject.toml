@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "mpd-client"
+version = "0.1.0"
+description = "Keyboard multimedia key remote control script for MPD + Snapcast"
+authors = ["EnigmaCurry <ryan@enigmacurry.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "mpd_client"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+evdev = "^1.6.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
