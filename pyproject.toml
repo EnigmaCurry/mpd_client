@@ -10,6 +10,7 @@ packages = [{include = "mpd_client"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 evdev = "^1.6.1"
+snapcast = "^2.3.1"
 
 
 [build-system]
