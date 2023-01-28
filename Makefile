@@ -2,11 +2,17 @@
 help:
 	@echo try 'make install'
 
+.PHONY: install-poetry
+install-poetry:
+	@(which poetry || test -f ${HOME}/.local/bin/poetry) || (curl -sSL https://install.python-poetry.org | python3 -)
 
 .PHONY: install
 install:
 	poetry install
+	systemctl --user link ./media-keys.service
+	systemctl --user daemon-reload
+	systemctl --user enable --now media-keys.service
 
 .PHONY: media-keys
 media-keys:
-	SNAPCAST_CLIENT=livingroom-amp INPUT_DEVICE=/dev/input/by-id/usb-Vaydeer_Vaydeer_Multimedia_Console-event-kbd poetry run python mpd_client/media_keys.py
+	@bash -c "source .env && ${HOME}/.local/bin/poetry run python mpd_client/media_keys.py"

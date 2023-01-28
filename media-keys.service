@@ -1,0 +1,11 @@
+[Unit]
+Description=keyboard shortcut daemon
+After=network.target
+
+[Service]
+ExecStart=make -C /home/pi/git/vendor/enigmacurry/mpd_client media-keys
+Restart=on-failure
+Type=simple
+
+[Install]
+WantedBy=default.target

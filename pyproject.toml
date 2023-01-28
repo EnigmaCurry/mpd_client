@@ -8,7 +8,7 @@ readme = "README.md"
 packages = [{include = "mpd_client"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
 evdev = "^1.6.1"
 snapcast = "^2.3.1"
 
